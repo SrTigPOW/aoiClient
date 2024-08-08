@@ -2,11 +2,10 @@ const { AoiClient } = require("aoi.js");
 require('dotenv').config();
 
 const token = process.env.DISCORD_TOKEN
-const prefix = process.env.PREFIX
 
 const client = new AoiClient({
     token: token,
-    prefix: prefix,
+    prefix: "$getVar[prefix]",
     intents: ["MessageContent", "Guilds", "GuildMessages"],
     events: ["onMessage", "onInteractionCreate"],
     database: {
