@@ -1,5 +1,8 @@
+require('dotenv').config();
+const prefix = process.env.PREFIX
+
 module.exports = (client) => {
   client.variables({
-     color: "ffffff",
+     prefix: prefix,
   }, "main");
 }
