@@ -17,6 +17,7 @@ const client = new AoiClient({
     }
 });
 
-require('./src/handler/clientVariables')(client)
-require('./src/handler/clientStatus')(client)
+// Load the bot's Commands, Variables, and States from a specific folder within the project.
+require('./src/handler/clientVariables')(client);
+require('./src/handler/clientStatus')(client);
 client.loadCommands("./src/commands");
